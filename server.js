@@ -102,11 +102,6 @@ server.get('/listmovie', async(req, res) => {
     res.json(datas)
 })
 
-server.get('/listmovie', async(req, res) => {
-    let datas = await getAllData('films');
-    res.json(datas)
-})
-
 server.get('/listtype', async(req, res) => {
     let datas = await getAllData('types');
     res.json(datas)
