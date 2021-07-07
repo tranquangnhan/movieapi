@@ -37,7 +37,7 @@ const port = process.env.PORT || 3000;
 server.use(jsonServer.bodyParser)
 
 // Use json-server middlewares 
-server.use(middlewares);
+// server.use(middlewares);
 
 
 // start code by Nhan
@@ -112,23 +112,32 @@ server.get('/listcategory', async(req, res) => {
     res.json(datas)
 })
 
+server.get('/detail/:id', async(req, res) => {
+    var id = req.params.id;
+    let datas = await getAllData('films/' + id);
+    res.json(datas)
+})
 
-
+server.get('/detail/:id', async(req, res) => {
+    var id = req.params.id;
+    let datas = await getAllData('films/' + id);
+    res.json(datas)
+})
 
 // Auth middleware 
-if (yargs.argv.authentication === 'true') {
-    const authMiddleware = require('./middleware/auth-middleware');
-    server.use(authMiddleware);
-}
+// if (yargs.argv.authentication === 'true') {
+//     const authMiddleware = require('./middleware/auth-middleware');
+//     server.use(authMiddleware);
+// }
 
 // delay middleware
-const delayMiddleware = require('./middleware/delay-middleware')(yargs.argv.delay);
-server.use(delayMiddleware);
+// const delayMiddleware = require('./middleware/delay-middleware')(yargs.argv.delay);
+// server.use(delayMiddleware);
 
 // Token verify route
-const verify = require('./routes/verify-route');
-const { response } = require('express');
-server.get('/verify', verify);
+// const verify = require('./routes/verify-route');
+// const { response } = require('express');
+// server.get('/verify', verify);
 
 // Start JSON Server
 server.use(router);
