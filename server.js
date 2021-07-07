@@ -72,19 +72,19 @@ const getAllData = async(subUrl) => {
 
 
 // configure user storage in memory
-const userStorage = require('./security/users-storage')({
-    email: 'user@example.com',
-    password: '1234'
-});
-userStorage.logUsers();
+// const userStorage = require('./security/users-storage')({
+//     email: 'user@example.com',
+//     password: '1234'
+// });
+// userStorage.logUsers();
 
-// Route for login
-const login = require('./routes/login-route')(userStorage);
-server.post('/login', login);
+// // Route for login
+// const login = require('./routes/login-route')(userStorage);
+// server.post('/login', login);
 
-// Route for sign-in
-const register = require('./routes/sign-in-route')(userStorage);
-server.post('/sign-in', register);
+// // Route for sign-in
+// const register = require('./routes/sign-in-route')(userStorage);
+// server.post('/sign-in', register);
 
 server.get('/movie', async(req, res) => {
     var datas = await getAllData('films');
