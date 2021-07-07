@@ -69,7 +69,11 @@ const getAllData = async(subUrl) => {
             'Content-Type': 'application/json'
         },
     }
-    return await fetchAPi(baseUrl, options);
+    try {
+        return await fetchAPi(baseUrl, options);
+    } catch (err) {
+        next(err);
+    }
 }
 
 // end code by nhan
