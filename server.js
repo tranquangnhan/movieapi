@@ -37,7 +37,7 @@ const port = process.env.PORT || 3000;
 server.use(jsonServer.bodyParser)
 
 // Use json-server middlewares 
-// server.use(middlewares);
+server.use(middlewares);
 
 
 // start code by Nhan
@@ -52,12 +52,8 @@ server.set('view engine', 'ejs');
 
 const url = 'http://localhost:3000/';
 const fetchAPi = async(url, option) => {
-    try {
-        const dulieu = await fetch(url, option);
-        return dulieu.json();
-    } catch (err) {
-        next(err);
-    }
+    const dulieu = await fetch(url, option);
+    return dulieu.json();
 }
 
 
@@ -69,11 +65,8 @@ const getAllData = async(subUrl) => {
             'Content-Type': 'application/json'
         },
     }
-    try {
-        return await fetchAPi(baseUrl, options);
-    } catch (err) {
-        next(err);
-    }
+    return await fetchAPi(baseUrl, options);
+
 }
 
 // end code by nhan
@@ -105,26 +98,43 @@ const getAllData = async(subUrl) => {
 //     })
 // })
 
-server.get('/listmovie', async(req, res) => {
-    let datas = await getAllData('films');
-    res.json(datas)
+server.get('/listmovie', async(req, res, next) => {
+    try {
+        let datas = await getAllData('films');
+        res.json(datas)
+    } catch (err) {
+        next(err);
+    }
 })
 
-server.get('/listtype', async(req, res) => {
-    let datas = await getAllData('types');
-    res.json(datas)
+server.get('/listtype', async(req, res, next) => {
+    try {
+        let datas = await getAllData('types');
+        res.json(datas)
+    } catch (err) {
+        next(err);
+    }
 })
 
-server.get('/listcategory', async(req, res) => {
-    let datas = await getAllData('categories');
-    res.json(datas)
+server.get('/listcategory', async(req, res, next) => {
+    try {
+        let datas = await getAllData('categories');
+        res.json(datas)
+    } catch (err) {
+        next(err);
+    }
 })
 
-server.get('/detail/:id', async(req, res) => {
-    var id = req.params.id;
-    let datas = await getAllData('films/' + id);
-    res.json(datas)
-})
+server.get('/detail/:id', async(req, res, next) => {
+        try {
+            var id = req.params.id;
+            let datas = await getAllData('films/' + id);
+            res.json(datas)
+        } catch (err) {
+            next(err);
+        }
+    })
+    // sua code
 
 
 // Auth middleware 
