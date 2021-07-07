@@ -1,6 +1,5 @@
 {
-    "films": [
-      {
+    "films": [{
             "id": 1,
             "typeId": 1,
             "country": 1,
@@ -7464,7 +7463,7 @@
         },
         {
             "id": 85,
-            "typeId": 1,
+            "typeId": 3,
             "country": 1,
             "categories": [{
                 "idCategory": 2
@@ -7478,7 +7477,7 @@
         },
         {
             "id": 86,
-            "typeId": 1,
+            "typeId": 3,
             "country": 1,
             "categories": [{
                 "idCategory": 9
@@ -7570,7 +7569,7 @@
         },
         {
             "id": 87,
-            "typeId": 1,
+            "typeId": 3,
             "country": 1,
             "categories": [{
                 "idCategory": 1
@@ -7702,7 +7701,7 @@
         },
         {
             "id": 88,
-            "typeId": 1,
+            "typeId": 3,
             "country": 1,
             "categories": [{
                 "idCategory": 1
@@ -7834,7 +7833,7 @@
         },
         {
             "id": 89,
-            "typeId": 1,
+            "typeId": 3,
             "country": 1,
             "categories": [{
                 "idCategory": 1
@@ -8026,7 +8025,7 @@
         },
         {
             "id": 90,
-            "typeId": 1,
+            "typeId": 3,
             "country": 1,
             "categories": [{
                 "idCategory": 9
@@ -8128,7 +8127,7 @@
         },
         {
             "id": 91,
-            "typeId": 1,
+            "typeId": 3,
             "country": 1,
             "categories": [{
                 "idCategory": 1
@@ -8200,7 +8199,7 @@
         },
         {
             "id": 92,
-            "typeId": 1,
+            "typeId": 3,
             "country": 1,
             "categories": [{
                 "idCategory": 1
@@ -8407,7 +8406,7 @@
         },
         {
             "id": 93,
-            "typeId": 1,
+            "typeId": 3,
             "country": 1,
             "categories": [{
                 "idCategory": 9
@@ -42653,7 +42652,7 @@
         },
         {
             "id": 45,
-            "typeId": 1,
+            "typeId": 4,
             "country": 1,
             "categories": [{
                 "idCategory": 2
@@ -42668,7 +42667,7 @@
         },
         {
             "id": 457,
-            "typeId": 1,
+            "typeId": 4,
             "country": 1,
             "categories": [{
                 "idCategory": 9
@@ -42683,7 +42682,7 @@
         },
         {
             "id": 458,
-            "typeId": 1,
+            "typeId": 4,
             "country": 1,
             "categories": [{
                 "idCategory": 9
@@ -42698,7 +42697,7 @@
         },
         {
             "id": 459,
-            "typeId": 1,
+            "typeId": 4,
             "country": 1,
             "categories": [{
                 "idCategory": 1
@@ -42713,7 +42712,7 @@
         },
         {
             "id": 460,
-            "typeId": 1,
+            "typeId": 4,
             "country": 1,
             "categories": [{
                 "idCategory": 1
@@ -50284,7 +50283,7 @@
         },
         {
             "id": 893,
-            "typeId": 1,
+            "typeId": 5,
             "country": 1,
             "categories": [{
                 "idCategory": 10
@@ -50356,7 +50355,7 @@
         },
         {
             "id": 894,
-            "typeId": 1,
+            "typeId": 5,
             "country": 1,
             "categories": [{
                 "idCategory": 10
@@ -50371,7 +50370,7 @@
         },
         {
             "id": 895,
-            "typeId": 1,
+            "typeId": 5,
             "country": 1,
             "categories": [{
                 "idCategory": 10
@@ -50386,7 +50385,7 @@
         },
         {
             "id": 896,
-            "typeId": 1,
+            "typeId": 5,
             "country": 1,
             "categories": [{
                 "idCategory": 10
@@ -50401,7 +50400,7 @@
         },
         {
             "id": 897,
-            "typeId": 1,
+            "typeId": 5,
             "country": 1,
             "categories": [{
                 "idCategory": 1
@@ -50416,7 +50415,7 @@
         },
         {
             "id": 898,
-            "typeId": 1,
+            "typeId": 5,
             "country": 1,
             "categories": [{
                 "idCategory": 1
@@ -50577,7 +50576,7 @@
             "url": "https://www.fullphimz.net/p/thanh-xuan-tu-tao-vi-tap-1"
         }, {
             "id": 899,
-            "typeId": 1,
+            "typeId": 5,
             "country": 1,
             "categories": [{
                 "idCategory": 1
