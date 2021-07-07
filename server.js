@@ -126,15 +126,15 @@ server.get('/listcategory', async(req, res, next) => {
 })
 
 server.get('/detail/:id', async(req, res, next) => {
-        try {
-            var id = req.params.id;
-            let datas = await getAllData('films/' + id);
-            res.json(datas)
-        } catch (err) {
-            next(err);
-        }
-    })
-    // sua code
+    try {
+        var id = req.params.id;
+        let datas = await getAllData('films/' + id);
+        res.json(datas)
+    } catch (err) {
+        next(err);
+    }
+});
+// sua code
 
 
 // Auth middleware 
