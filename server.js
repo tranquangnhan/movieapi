@@ -52,8 +52,12 @@ server.set('view engine', 'ejs');
 
 const url = 'http://localhost:3000/';
 const fetchAPi = async(url, option) => {
-    const dulieu = await fetch(url, option);
-    return dulieu.json();
+    try {
+        const dulieu = await fetch(url, option);
+        return dulieu.json();
+    } catch (err) {
+        next(err);
+    }
 }
 
 
@@ -86,16 +90,16 @@ const getAllData = async(subUrl) => {
 // const register = require('./routes/sign-in-route')(userStorage);
 // server.post('/sign-in', register);
 
-server.get('/movie', async(req, res) => {
-    var datas = await getAllData('films');
-    var categories = await getAllData('categories');
-    var types = await getAllData('types');
-    res.render('movies', {
-        datas: datas,
-        categories: categories,
-        types: types
-    })
-})
+// server.get('/movie', async(req, res) => {
+//     var datas = await getAllData('films');
+//     var categories = await getAllData('categories');
+//     var types = await getAllData('types');
+//     res.render('movies', {
+//         datas: datas,
+//         categories: categories,
+//         types: types
+//     })
+// })
 
 server.get('/listmovie', async(req, res) => {
     let datas = await getAllData('films');
@@ -118,11 +122,6 @@ server.get('/detail/:id', async(req, res) => {
     res.json(datas)
 })
 
-server.get('/detail/:id', async(req, res) => {
-    var id = req.params.id;
-    let datas = await getAllData('films/' + id);
-    res.json(datas)
-})
 
 // Auth middleware 
 // if (yargs.argv.authentication === 'true') {
